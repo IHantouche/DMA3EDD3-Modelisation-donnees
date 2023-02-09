@@ -6,7 +6,7 @@
 
 <#Margot>
     voc:name "Margot"^^xsd:str ;
-    xsd:âge : "32"^^xsd : integer ;
+    xsd:age : "32"^^xsd : integer ;
     xsd:pants : "40"^^xsd : integer ;
     xsd:shoes : "38"^^xsd : integer ;
     rel:spouseOf <#Arthur> ;
