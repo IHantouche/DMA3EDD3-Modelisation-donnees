@@ -1,7 +1,6 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2001/01/rdf-schema#> .
 @prefix rel: <http://www.perceive.net/schemas/relationship/> .
-@prefix rel: <http://www.perceive.net/schemas/relationship/> .
 @prefix voc: <&vocabulaire;> .
 @prefix base: <http://www.avun.fr/> .
 
