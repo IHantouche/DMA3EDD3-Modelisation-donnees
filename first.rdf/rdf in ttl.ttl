@@ -1,0 +1,46 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2001/01/rdf-schema#> .
+@prefix rel: <http://www.perceive.net/schemas/relationship/> .
+@prefix rel: <http://www.perceive.net/schemas/relationship/> .
+@prefix voc: <&vocabulaire;> .
+@prefix base: <http://www.avun.fr/> .
+
+<#Margot>
+    voc:name "Margot"^^xsd:str ;
+    xsd:âge : "32"^^xsd : integer ;
+    xsd:pants : "40"^^xsd : integer ;
+    xsd:shoes : "38"^^xsd : integer ;
+    rel:spouseOf <#Arthur> ;
+    rel:parentOf [a rdf:Bag ; rdf:li <#Simon>, <#Marie>] ;
+    rel:childOf <#Simone> ;
+    rel:friendOf [a rdf:Bag ; rdf:li <#Alice>, <#Pierre>] ;
+
+<#Arthur>
+    voc:name "Arthur"^^xsd:str ;
+    rel:spouseOf <#Margot> ;
+    rel:parentOf [a rdf:Bag ; rdf:li <#Simon>, <#Marie>] .
+
+<#Simon>
+    voc:name "Simon"^^xsd:str ;
+    rel:childOf [a rdf:Bag ; rdf:li <#Margot>, <#Arthur>] ;
+    rel:siblingOf <#Marie> ;
+    rel:grandchildOf <#Simone> .
+
+<#Marie>
+    voc:name "Marie"^^xsd:str ;
+    rel:childOf [a rdf:Bag ; rdf:li <#Margot>, <#Arthur>] ;
+    rel:siblingOf <#Simon> ;
+    rel:grandchildOf <#Simone> .
+
+<#Alice>
+    voc:name "Alice"^^xsd:str ;
+    rel:colleagueOf <#Margot> .
+
+<#Pierre>
+    voc:name "Pierre"^^xsd:str ;
+    rel:colleagueOf <#Margot> .
+
+<#Simone>
+    voc:name "Simone"^^xsd:str ;
+    rel:parentOf <#Margot> ;
+    rel:grandparentOf [a rdf:Bag ; rdf:li <#Simon>, <#Marie>] .
