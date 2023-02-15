@@ -1,0 +1,84 @@
+<rdf : RDF xmnls : rdf = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+ xmnls : rdfs = "http://www.w3.org/2001/01/rdf-schema#"
+ xmnls : rel = "http://www.perceive.net/schemas/relationship/"
+ xmlns : voc = "http://www.avun.fr/vocabulaire#" 
+ xml  : base = "http://www.avun.fr/"
+
+ <rdf:Description
+  rdf: about="#Margot">
+  <rdf:type rdf:resource="http://www.avun.fr/voc#Teacher"/>
+  <voc: name>Margot</voc:name>
+  <voc:age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</voc:age>
+  <voc:pants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</voc:pants>
+  <voc:shoes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">38</voc:shoes>
+   <rel:spouseOf rdf:resource="#Arthur"></rel:spouseOf>
+   <rel:parentOf>
+    <rdf:Bag> 
+     <rdf:li rdf:resource="#Simon", "#Marie"></rdf:li>
+    </rdf:Bag>
+   </rel:parentOf>
+   <rel:childOf rdf:resource="#Simone"></rel:childOf>
+   <rel:colleagueOf> 
+    <rdf:Bag>
+     <rdf:li rdf:resource="#Alice", "#Pierre"></rdf:li> 
+    </rdf:Bag>
+   </rel:colleagueOf> 
+ </rdf:Description>
+
+ <rdf:Description
+  rdf:about="#Arthur">
+   <voc:name>Arthur</voc:name>
+   <rel:spouseOf rdf:ressource="#Margot"></rel:spouseOf>
+   <rel:parentOf>
+    <rdf:Bag> 
+     <rdf:li rdf:ressource="#Simon", "#Marie"></rdf:li>
+    </rdf:Bag>
+   </rel:parentOf>
+ </rdf:Description>
+
+ <rdf:Description
+  rdf:about="#Simon">
+   <voc:name>Simone</voc:name>
+   <rel:childOf>
+    <rdf:Bag> 
+     <rdf:li rdf:ressource="#Margot", "#Arthur"></rdf:li>
+    </rdf:Bag>
+   </rel:childOf>
+   <rel:grandchildOf rdf:ressource="#Simone"></rel:grandchildOf>
+ </rdf:Description>
+
+ <rdf:Description
+  rdf:about="#Marie">
+   <voc:name>Marie</voc:name>
+   <rel:childOf>
+    <rdf:Bag> 
+     <rdf:li rdf:ressource="#Margot", "#Arthur"></rdf:li>
+    </rdf:Bag>
+   </rel:childOf>
+   <rel:grandchildOf rdf:ressource="#Simone"></rel:grandchildOf>
+ </rdf:Description>
+
+ <rdf:Description
+  rdf:about="#Alice">
+   <voc:name>Alice</voc:name>
+    <rel:colleagueOf rdf:ressource="#Margot"></rel:colleagueOf>
+ </rdf:Description>
+
+ <rdf:Description
+  rdf:about="#Pierre">
+   <voc:name>Pierre</voc:name>
+    <rel:colleagueOf rdf:ressource="#Margot"></rel:colleagueOf>
+ </rdf:Description>
+
+ <rdf:Description
+  rdf:about="#Simone">
+   <voc:name>Simone</voc:name>
+   <rel:parentOf rdf:ressource="#Margot"></rel:parentOf>
+   <rel:grandparentOf>
+    <rdf:Bag> 
+     <rdf:li rdf:ressource="#Simon", "#Marie"></rdf:li>
+    </rdf:Bag>
+   </rel:grandparentOf>
+ </rdf:Description>
+
+</rdf : RDF>
