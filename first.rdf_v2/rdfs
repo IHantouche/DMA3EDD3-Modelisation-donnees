@@ -1,0 +1,115 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+ xmlns:rdfs="http://www.w3.org/2001/01/rdf-schema#" 
+ xmlns="http://www.w3.org/2001/01/rdf-schema#" 
+ xml:base="http://www.perceive.net/schemas/20030115/relationship">
+
+ <Class rdf:ID="Animal">
+ <label xml:lang="en">animal</label>
+ <comment xml:lang="en">a living organism that feeds on organic matter, typically having specialized sense organs and nervous system.
+ </comment>
+ <label xml:lang="fr">animale</label>
+ <comment xml:lang="fr">un organisme vivant qui se nourrit de matière organique, ayant généralement des organes sensoriels et un système nerveux spécialisés.
+ </comment>
+ </Class>
+
+ <Class rdf:ID="Male">
+ <subClassOf rdf:resource="#Animal"/>
+ <label xml:lang="en">male</label>
+ <comment xml:lang="en">an animal that produces gametes (spermatozoa) that can fertilize female gametes (ova).
+ </comment>
+ <label xml:lang="fr">mâle</label>
+ <comment xml:lang="fr"> individu appartenant au sexe qui possède le pouvoir de fécondation.
+ </comment>
+ </Class>
+
+ <Class rdf:ID="Female">
+ <subClassOf rdf:resource="#Animal"/>
+ <label xml:lang="en">female</label>
+ <comment xml:lang="en"> an animal that produces gametes (ova) that can be fertilized by male gametes (spermatozoa).
+ </comment>
+ <label xml:lang="fr">femelle</label>
+ <comment xml:lang="fr"> animal appartenant au sexe apte à produire des ovules.
+ </comment>
+ </Class>
+
+ <Class rdf:ID="Person">
+ <subClassOf rdf:resource="#Animal"/>
+ <label xml:lang="en">person</label>
+ <label xml:lang="en">human being</label>
+ <label xml:lang="en">human</label>
+ <comment xml:lang="en">a culture-bearing primate classified in the genus Homo, especially the species H. sapiens.
+ </comment>
+ <label xml:lang="fr">personne</label>
+ <label xml:lang="fr">être humain</label>
+ <label xml:lang="fr">humain</label>
+ <comment xml:lang="fr">un primate porteur de culture classé dans le genre Homo, en particulier l'espèce H. sapiens.
+ </comment>
+ </Class>
+
+ </rdf:Property>
+ <rdf:Property rdf:ID="name">
+ <subPropertyOf rdf:resource="Person"/>
+ <label xml:lang="en">has for name</label>
+ <comment xml:lang="en">is a personal name used to refer to a person.
+ </comment>
+ <label xml:lang="fr">a pour prénom</label>
+ <comment xml:lang="fr">est un nom personnel utilisé pour désigner une personne
+ </comment>
+ </rdf:Property>
+
+ </rdf:Property>
+ <rdf:Property rdf:ID="occupation">
+ <subPropertyOf rdf:resource="Person"/>
+ <label xml:lang="en">has for work</label>
+ <comment xml:lang="en">is a profession that has a certain social or intellectual prestige.
+ </comment>
+ <label xml:lang="fr">a pour travail</label>
+ <comment xml:lang="fr">est un métier qui a un certain prestige social ou intellectuel.
+ </comment>
+ </rdf:Property>
+
+ </rdf:Property>
+ <rdf:Property rdf:ID="parentOf">
+ <subPropertyOf rdf:resource="Person"/>
+ <label xml:lang="en">has for child</label>
+ <comment xml:lang="en">is the parent of
+ </comment>
+ <label xml:lang="fr">a pour enfant</label>
+ <comment xml:lang="fr">est le parent de
+ </comment>
+ </rdf:Property>
+
+ </rdf:Property>
+ <rdf:Property rdf:ID="childOf">
+ <subPropertyOf rdf:resource="Person"/>
+ <label xml:lang="en">has for parent</label>
+ <comment xml:lang="en">is the child of
+ </comment>
+ <label xml:lang="fr">a pour parent</label>
+ <comment xml:lang="fr">est l'enfant de
+ </comment>
+ </rdf:Property>
+
+ </rdf:Property>
+ <rdf:Property rdf:ID="spouseOf">
+ <subPropertyOf rdf:resource="Person"/>
+ <label xml:lang="en">has for spouse</label>
+ <comment xml:lang="en">is the spouse of
+ </comment>
+ <label xml:lang="fr">a pour partenaire</label>
+ <comment xml:lang="fr">est le partenaire de
+ </comment>
+ </rdf:Property>
+
+ </rdf:Property>
+ <rdf:Property rdf:ID="colleagueOf">
+ <subPropertyOf rdf:resource="Person"/>
+ <label xml:lang="en">has for colleague</label>
+ <comment xml:lang="en">une personne avec qui on travaille dans une profession ou une entreprise.
+ </comment>
+ <label xml:lang="fr">a pour collègue</label>
+ <comment xml:lang="fr">a person with whom one works in a profession or business.
+ </comment>
+ </rdf:Property>
+
+</rdf:RDF>
